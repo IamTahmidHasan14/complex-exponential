@@ -1,0 +1,11 @@
+%complex exponential;
+N=100;
+W=6*pi/N;
+n=0:N-1;
+x=exp(jw*n);
+
+figure;
+subplot(2,1,1);
+stem(real(x));
+subplot(2,1,2);
+stem(imag(x))
