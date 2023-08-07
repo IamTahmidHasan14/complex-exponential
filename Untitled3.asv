@@ -1,0 +1,23 @@
+%even odd;
+N=100;
+n=0:N-1;
+x=mod(n,11)-5;
+
+x_flip=zeros([1,N]);
+for i=0,N-1
+    x_flip(n+1)=x(mod(-n,N)+1);
+end
+
+% for i=0,N-1
+%     e(n)=(0.5)*(x(n)+x(-n));
+% end
+e=(0.5*(x+x_flip);
+% o=(0.5)*2;
+
+figure;
+subplot(4,1,1);
+stem(x);
+subplot(4,1,2);
+stem(x_flip);
+subplot(4,1,3);
+stem(e);
